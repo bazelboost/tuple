@@ -1,0 +1,23 @@
+load("@rules_cc//cc:defs.bzl", "cc_library")
+
+_detail_hdrs = [
+    "include/boost/tuple/detail/*.hpp",
+]
+
+cc_library(
+    name = "tuple_internal",
+    includes = ["include"],
+    hdrs = glob(_detail_hdrs),
+)
+
+cc_library(
+    name = "tuple",
+    visibility = ["//visibility:public"],
+    includes = ["include"],
+    hdrs = glob(["include/boost/tuple/**/*.hpp"], exclude = _detail_hdrs),
+    deps = [
+        ":tuple_internal",
+        "@boost//static_assert",
+        "@boost//type_traits",
+    ],
+)

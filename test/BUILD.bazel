@@ -1,0 +1,60 @@
+load("@rules_cc//cc:defs.bzl", "cc_test")
+
+cc_test(
+    name = "another_tuple_test_bench",
+    srcs = ["another_tuple_test_bench.cpp"],
+    deps = [
+        "//:tuple",
+        "@boost//core",
+    ],
+)
+
+cc_test(
+    name = "io_test",
+    srcs = ["io_test.cpp"],
+    deps = [
+        "//:tuple",
+        "@boost//core",
+    ],
+)
+
+cc_test(
+    name = "std_tuple_element",
+    srcs = ["std_tuple_element.cpp"],
+    deps = [
+        "//:tuple",
+        "@boost//core",
+        "@boost//type_traits",
+        "@boost//config",
+    ],
+)
+
+cc_test(
+    name = "std_tuple_size",
+    srcs = ["std_tuple_size.cpp"],
+    deps = [
+        "//:tuple",
+        "@boost//core",
+        "@boost//config",
+    ],
+)
+
+cc_test(
+    name = "structured_bindings",
+    srcs = ["structured_bindings.cpp"],
+    deps = [
+        "//:tuple",
+        "@boost//core",
+        "@boost//config",
+    ],
+)
+
+cc_test(
+    name = "tuple_test_bench",
+    srcs = ["tuple_test_bench.cpp"],
+    deps = [
+        "//:tuple",
+        "@boost//core",
+        "@boost//type_traits",
+    ],
+)
