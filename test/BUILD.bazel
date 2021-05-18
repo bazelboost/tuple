@@ -5,7 +5,7 @@ cc_test(
     srcs = ["another_tuple_test_bench.cpp"],
     deps = [
         "//:tuple",
-        "@boost//core",
+        "@boost//libs/core",
     ],
 )
 
@@ -14,7 +14,7 @@ cc_test(
     srcs = ["io_test.cpp"],
     deps = [
         "//:tuple",
-        "@boost//core",
+        "@boost//libs/core",
     ],
 )
 
@@ -23,9 +23,9 @@ cc_test(
     srcs = ["std_tuple_element.cpp"],
     deps = [
         "//:tuple",
-        "@boost//core",
-        "@boost//type_traits",
-        "@boost//config",
+        "@boost//libs/core",
+        "@boost//libs/type_traits",
+        "@boost//libs/config",
     ],
 )
 
@@ -34,8 +34,8 @@ cc_test(
     srcs = ["std_tuple_size.cpp"],
     deps = [
         "//:tuple",
-        "@boost//core",
-        "@boost//config",
+        "@boost//libs/core",
+        "@boost//libs/config",
     ],
 )
 
@@ -44,8 +44,8 @@ cc_test(
     srcs = ["structured_bindings.cpp"],
     deps = [
         "//:tuple",
-        "@boost//core",
-        "@boost//config",
+        "@boost//libs/core",
+        "@boost//libs/config",
     ],
 )
 
@@ -54,7 +54,7 @@ cc_test(
     srcs = ["tuple_test_bench.cpp"],
     deps = [
         "//:tuple",
-        "@boost//core",
-        "@boost//type_traits",
+        "@boost//libs/core",
+        "@boost//libs/type_traits",
     ],
 )

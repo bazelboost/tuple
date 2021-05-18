@@ -17,7 +17,7 @@ cc_library(
     hdrs = glob(["include/boost/tuple/**/*.hpp"], exclude = _detail_hdrs),
     deps = [
         ":tuple_internal",
-        "@boost//static_assert",
-        "@boost//type_traits",
+        "@boost//libs/static_assert",
+        "@boost//libs/type_traits",
     ],
 )
